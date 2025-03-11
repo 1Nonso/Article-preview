@@ -2,7 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+/* .manrope-font {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+} */
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
   display: flex;
   align-items: center;
   justify-content: center;

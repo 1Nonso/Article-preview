@@ -5,14 +5,14 @@ const Bio = () => {
     console.log("Summer")
   return (
     <>
-      <section className="flex items-center">
+      <section className="flex items-center justify-between w-[100%] ">
         <img className="w-[3rem] rounded-[2rem]" src={profilePicture} alt="" />
-        <div>
-          <p>Michelle Appleton</p>
+        <div className="relative right-2">
+          <p className="font-extrabold">Michelle Appleton</p>
           <p>28 Jun 2020</p>
         </div>
-        <button>
-          <img src={shareButton} alt="" />
+        <button className="shareButton flex justify-center items-center rounded-full w-[2rem] h-[2rem]">
+          <img className="w-[1.2rem] relative bottom-[0.1rem]" src={shareButton} alt="" />
         </button>
       </section>
     </>

@@ -5,7 +5,7 @@ const Bio = () => {
     console.log("Summer")
   return (
     <>
-      <section className="flex items-center justify-between w-[100%] ">
+      <section className="flex items-center justify-between w-[100%] lg:w-[90%] ">
         <img className="w-[3rem] rounded-[2rem]" src={profilePicture} alt="" />
         <div className="relative right-2">
           <p className="font-extrabold">Michelle Appleton</p>

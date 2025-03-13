@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Bio from "./component/bio";
 import firstImage from "./assets/drawers.jpg";
+import ShareComponentMobile from "./component/shareMobile";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -12,7 +13,7 @@ function App() {
         <div className="w-[100%] lg:w-[70%] h-[38%] lg:h-[100%] overflow-clip bg-cover">
           <img className="lg:h-[100%] lg:w-[] " src={firstImage} alt="" />
         </div>
-        <div className="flex flex-col justify-between items-center lg:w-[100%] h-[62%] lg:h-[100%] p-7 lg:px-7 lg:py-3">
+        <div className="flex flex-col justify-between items-center lg:w-[100%] h-[62%] lg:h-[100%] p-7 lg:px- lg:py-3">
           <p className="font-bold text-base">
             Shift the overall look and feel by adding these wonderful touches to
             furniture in your home
@@ -23,6 +24,7 @@ function App() {
             you make any room feel complete
           </p>
           <Bio />
+          <ShareComponentMobile />
         </div>
       </main>
     </>

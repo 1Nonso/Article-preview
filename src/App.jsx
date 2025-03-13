@@ -11,11 +11,11 @@ function App() {
           <img className="lg:h-[100%] lg:w-[] " src={firstImage} alt="" />
         </div>
         <div className="flex flex-col justify-between items-center lg:w-[100%] h-[62%] lg:h-[100%] p-7 lg:px- lg:py-3">
-          <p className="font-bold text-base tracking-[0.02em]">
+          <p className="font-black text-base tracking-[0.02em] text-[#48556a] ">
             Shift the overall look and feel by adding these wonderful touches to
             furniture in your home
           </p>
-          <p className="text-sm tracking-[0.02em] font-normal  ">
+          <p className="text-sm tracking-[0.02em] font-medium text-[#6d7f97] ">
             Ever been in a room and felt like something was missing? Perhaps it
             felt slightly bare and uninviting. I’ve got some simple tips to help
             you make any room feel complete

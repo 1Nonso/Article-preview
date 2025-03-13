@@ -12,6 +12,8 @@ const Bio = () => {
   }
 
   if (defaultState) {
+    console.log("the state is true");
+
     return (
       <>
         <ShareComponent />
@@ -19,13 +21,9 @@ const Bio = () => {
     );
   }
 
-  if (defaultState === true) {
-    console.log("the state is true");
-  }
-
   return (
     <>
-      <section className="flex items-center justify-between w-[100%] lg:w-[100%] px-6 ">
+      <section className="flex items-center justify-between w-[100%] lg:w-[100%] px-6 pb-8 text-[#48556a] ">
         <img
           className="w-[3rem] lg:w-[2rem] rounded-[2rem]"
           src={profilePicture}
@@ -48,7 +46,7 @@ const Bio = () => {
           />
         </button>
       </section>
-      <ShareComponent />
+      {/* <ShareComponent /> */}
     </>
   );
 };
@@ -61,7 +59,9 @@ export const ShareComponent = () => {
       <section className="flex justify-around items-center shareComponent w-[100%] h-20 py-3">
         <div className="flex items-center justify-around w-[60%] ">
           <button>
-            <p className=" tracking-[0.4em] text-[0.7rem] font-light text-[#fff] " >SHARE</p>
+            <p className=" tracking-[0.4em] text-[0.7rem] font-light text-[#fff] ">
+              SHARE
+            </p>
           </button>
           <button>
             <img src={facebook} alt="Facebook logo" />

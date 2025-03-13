@@ -12,23 +12,17 @@ const Bio = () => {
   }
 
   if (defaultState) {
-    console.log("Hello world");
     return (
       <>
-        <section>
-          <div></div>
-          <button
-            onClick={() => {
-              setDefaultState(true);
-            }}
-          >
-            <img src={shareButton} alt="" />
-          </button>
-        </section>
+        <ShareComponent />
       </>
     );
   }
-  
+
+  if (defaultState === true) {
+    console.log("the state is true");
+  }
+
   return (
     <>
       <section className="flex items-center justify-between w-[100%] lg:w-[100%] ">
@@ -54,6 +48,7 @@ const Bio = () => {
           />
         </button>
       </section>
+      <ShareComponent />
     </>
   );
 };
@@ -61,5 +56,28 @@ const Bio = () => {
 export default Bio;
 
 export const ShareComponent = () => {
-  return <></>;
+  return (
+    <>
+      <section className="shareComponent w-[100%] ">
+        <div>
+          <button>
+            <img src={twitter} alt="" />{" "}
+          </button>
+          <button>
+            <img src={pinterest} alt="" />{" "}
+          </button>
+          <button>
+            <img src={facebook} alt="" />{" "}
+          </button>
+        </div>
+        <button
+          onClick={() => {
+            setDefaultState(true);
+          }}
+        >
+          <img src={shareButton} alt="" />
+        </button>
+      </section>
+    </>
+  );
 };

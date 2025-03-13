@@ -2,8 +2,15 @@ import "./App.css";
 import Bio from "./component/bio";
 import firstImage from "./assets/drawers.jpg";
 import ShareComponentMobile from "./component/shareMobile";
+import { useState } from "react";
 
 function App() {
+  const [defaultState, setDefaultState] = useState(false);
+
+  let defaultStateValue = defaultState.valueOf();
+
+  console.log(defaultStateValue);
+
   return (
     <>
       <main className="main flex flex-col lg:flex-row w-[20rem] lg:w-[40rem] h-[35rem] lg:h-[15rem] rounded-lg overflow-hidden">
@@ -21,9 +28,22 @@ function App() {
             you make any room feel complete
           </p>
         </div>
-        <Bio />
-        <ShareComponentMobile />
+        {/* <Bio /> */}
+        {/* <ShareComponentMobile /> */}
+        {defaultState ? <Bio /> : <ShareComponentMobile />}
       </main>
+      <button
+        onClick={() => {
+          setDefaultState(true);
+
+          if (defaultState) {
+            setDefaultState(false);
+          }
+        }}
+        className="border-8 p-2"
+      >
+        Press me
+      </button>
     </>
   );
 }

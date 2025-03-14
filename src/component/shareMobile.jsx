@@ -25,13 +25,13 @@ const ShareComponentMobile = ({ changeValue }) => {
         </div>
         <button
           className="shareButtonMobile flex justify-center items-center rounded-full w-[1.7rem] h-[1.7rem]"
-          onClick={changeValue}
+          onClick={() => {changeValue()}}
         >
-          {/* <img
+          <img
             className="w-[1rem] relative bottom-[0.1rem]"
             src={shareButton}
             alt=""
-          /> */}
+          />
         </button>
       </section>
     </>

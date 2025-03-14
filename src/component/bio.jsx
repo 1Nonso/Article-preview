@@ -1,8 +1,7 @@
-import { useState } from "react";
 import profilePicture from "../assets/avatar-michelle.jpg";
 import shareButton from "../assets/icon-share.svg";
 
-const Bio = () => {
+const Bio = ({ changeValue }) => {
   // const [defaultState, setDefaultState] = useState(false);
   {
     /* ALgorithm to change the state of a button component, upon onclick function new return compoent gets added */
@@ -18,7 +17,7 @@ const Bio = () => {
 
   return (
     <>
-      <section className="flex items-center justify-between w-[100%] lg:w-[100%] px-6 pb-8 text-[#48556a] ">
+      <section className="flex items-center justify-between w-[100%] lg:w-[100%] px-6 pb-4 text-[#48556a] ">
         <img
           className="w-[3rem] lg:w-[2rem] rounded-[2rem]"
           src={profilePicture}
@@ -30,9 +29,9 @@ const Bio = () => {
         </div>
         <button
           className="shareButton flex justify-center items-center rounded-full w-[2.2rem] h-[2.2rem]"
-          // onClick={() => {
-          //   setDefaultState(true);
-          // }}
+          onClick={() => {
+            changeValue();
+          }}
         >
           <img
             className="w-[1.2rem] relative bottom-[0.1rem]"

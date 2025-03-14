@@ -17,7 +17,7 @@ const Bio = ({ changeValue }) => {
 
   return (
     <>
-      <section className="flex items-center justify-between w-[100%] lg:w-[100%] px-6 pb-4 text-[#48556a] ">
+      <section className="flex items-center justify-between w-[100%] lg:w-[100%] px-6 pb-4 text-[#48556a] h-24 ">
         <img
           className="w-[3rem] lg:w-[2rem] rounded-[2rem]"
           src={profilePicture}

@@ -21,7 +21,7 @@ function App() {
 
   return (
     <>
-      <main className="main flex flex-col lg:flex-row w-[20rem] lg:w-[40rem] h-[30rem] lg:h-[15rem] rounded-lg overflow-hidden">
+      <main className="main flex flex-col lg:flex-row w-[20rem] lg:w-[40rem] lg:h-[15rem] rounded-lg overflow-hidden">
         <div className="w-[100%] lg:w-[70%] h-[38%] lg:h-[100%] overflow-clip bg-cover">
           <img className="lg:h-[100%] lg:w-[] " src={firstImage} alt="" />
         </div>

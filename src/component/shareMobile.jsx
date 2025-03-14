@@ -3,10 +3,10 @@ import pinterest from "../assets/icon-pinterest.svg";
 import shareButton from "../assets/icon-share.svg";
 import twitter from "../assets/icon-twitter.svg";
 
-const ShareComponentMobile = () => {
+const ShareComponentMobile = ({ changeValue }) => {
   return (
     <>
-      <section className="flex justify-around items-center shareComponent w-[100%] h-20 py-3">
+      <section className="flex justify-around items-center shareComponent w-[100%] h-24 py-3">
         <div className="flex items-center justify-around w-[60%] ">
           <button>
             <p className=" tracking-[0.4em] text-[0.7rem] font-light text-[#fff] ">
@@ -25,15 +25,13 @@ const ShareComponentMobile = () => {
         </div>
         <button
           className="shareButtonMobile flex justify-center items-center rounded-full w-[1.7rem] h-[1.7rem]"
-          onClick={() => {
-            setDefaultState(true);
-          }}
+          onClick={changeValue}
         >
-          <img
+          {/* <img
             className="w-[1rem] relative bottom-[0.1rem]"
             src={shareButton}
             alt=""
-          />
+          /> */}
         </button>
       </section>
     </>

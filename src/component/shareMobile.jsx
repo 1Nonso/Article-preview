@@ -8,8 +8,10 @@ const ShareComponentMobile = ({ changeValue }) => {
   return (
     <>
       <motion.section
-        animate={{ y: [500, 0] }}
-        transition={{ duration: 0.5 }}
+        initial={{ opacity: 0 }}
+        animate={{ y: [-500, 0, -500, 0], opacity: 1, rotate: 360 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 2.5 }}
         className="flex justify-around items-center shareComponent w-[100%] h-24 py-3"
       >
         <div className="flex items-center justify-around w-[60%] ">

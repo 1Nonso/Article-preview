@@ -4,6 +4,8 @@ import firstImage from "./assets/drawers.jpg";
 import ShareComponentMobile from "./component/shareMobile";
 import { useState } from "react";
 import MediaQuery, { useMediaQuery } from "react-responsive";
+import BioLarge from "./component/bioL";
+import ShareComponentDesktop from "./component/shareDesktop";
 
 function App() {
   const [defaultState, setDefaultState] = useState(true);
@@ -12,7 +14,7 @@ function App() {
   console.log(defaultStateValue);
 
   const IsScreenSizeMobile = useMediaQuery({
-    query: "(max-width:1024px)",
+    query: "(max-width:768px)",
   });
   const changeValue = () => {
     setDefaultState(!defaultState);
@@ -49,20 +51,10 @@ function App() {
             felt slightly bare and uninviting. I’ve got some simple tips to help
             you make any room feel complete
           </p>
-          {/* <MediaQuery maxWidth={1024}>
-            {defaultState ? (
-              <Bio changeValue={changeValue} />
-            ) : (
-              <ShareComponentMobile changeValue={changeValue} />
-            )}
-          </MediaQuery> */}
-          {IsScreenSizeMobile ? (
-            renderComponent()
-          ) : (
-            <Bio changeValue={changeValue} />
-          )}
+          {IsScreenSizeMobile ? renderComponent() : <BioLarge />}
         </div>
       </main>
+      <ShareComponentDesktop />
     </>
   );
 }

@@ -3,7 +3,7 @@ import Bio from "./component/bio";
 import firstImage from "./assets/drawers.jpg";
 import ShareComponentMobile from "./component/shareMobile";
 import { useState } from "react";
-import MediaQuery, { useMediaQuery } from "react-responsive";
+import { useMediaQuery } from "react-responsive";
 import BioLarge from "./component/bioL";
 import ShareComponentDesktop from "./component/shareDesktop";
 
@@ -54,7 +54,6 @@ function App() {
           {IsScreenSizeMobile ? renderComponent() : <BioLarge />}
         </div>
       </main>
-      <ShareComponentDesktop />
     </>
   );
 }

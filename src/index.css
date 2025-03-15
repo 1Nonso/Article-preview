@@ -37,3 +37,13 @@ main {
 .shareButtonMobile {
   background-color: hsl(214, 17%, 51%);
 }
+
+.shareDesktop {
+  z-index: 1 !important;
+}
+
+.bioLarge {
+  button:hover {
+    opacity: 0.6;
+  }
+}

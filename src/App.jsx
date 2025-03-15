@@ -3,6 +3,7 @@ import Bio from "./component/bio";
 import firstImage from "./assets/drawers.jpg";
 import ShareComponentMobile from "./component/shareMobile";
 import { useState } from "react";
+import MediaQuery, { useMediaQuery } from "react-responsive";
 
 function App() {
   const [defaultState, setDefaultState] = useState(true);
@@ -10,6 +11,9 @@ function App() {
   let defaultStateValue = defaultState.valueOf();
   console.log(defaultStateValue);
 
+  const IsScreenSizeMobile = useMediaQuery({
+    query: "(max-width:1024px)",
+  });
   const changeValue = () => {
     setDefaultState(!defaultState);
     /* 
@@ -20,6 +24,14 @@ function App() {
       } 
     */
   };
+
+  function renderComponent() {
+    return defaultState ? (
+      <Bio changeValue={changeValue} />
+    ) : (
+      <ShareComponentMobile changeValue={changeValue} />
+    );
+  }
 
   return (
     <>
@@ -37,10 +49,17 @@ function App() {
             felt slightly bare and uninviting. I’ve got some simple tips to help
             you make any room feel complete
           </p>
-          {defaultState ? (
-            <Bio changeValue={changeValue} />
+          {/* <MediaQuery maxWidth={1024}>
+            {defaultState ? (
+              <Bio changeValue={changeValue} />
+            ) : (
+              <ShareComponentMobile changeValue={changeValue} />
+            )}
+          </MediaQuery> */}
+          {IsScreenSizeMobile ? (
+            renderComponent()
           ) : (
-            <ShareComponentMobile changeValue={changeValue} />
+            <Bio changeValue={changeValue} />
           )}
         </div>
       </main>
